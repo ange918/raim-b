@@ -1,0 +1,103 @@
+Create a complete professional multipage website project using 
+Vite.js + React + modern clean CSS.
+
+Project subject:
+RAIM Bénin — Réseau des Agences et Instituts du Mannequinat du Bénin
+
+Design inspiration:
+Fashlink, luxury fashion websites from Europe.
+Minimalist, elegant, modern, with full screen hero images.
+
+Brand colors (use them consistently):
+White (#FFFFFF)
+Black (#111111)
+Fashion Yellow (#F7C600)
+Fashion Green (#008037)
+Fashion Red (#C00000)
+
+Typography:
+Google Fonts: Montserrat for navigation + bold sections,
+Poppins for body text.
+
+Icons:
+Heroicons or lucide-react icons via CDN or npm.
+
+Animations:
+Smooth fade-in on scroll
+Hover zoom on images
+Responsive sticky navbar
+Hamburger menu for mobile
+
+Pages (all must be separate components with routing via React Router):
+
+1. Home (Accueil)
+- Hero section full width (African fashion runway placeholder)
+- Slogan:
+  “Professionnaliser et valoriser le mannequinat au Bénin”
+- Call-to-action buttons:
+  “Rejoindre le réseau” + “Découvrir nos actions”
+- Section Values: 4 cards with icons:
+  Excellence, Discipline, Talent, Leadership
+- Section Why RAIM? (4 benefits)
+  Formation, Registre professionnel, Protection, Visibilité internationale
+
+2. About (Qui sommes-nous ?)
+- History timeline:
+  2023: Statuts adoptés
+  2024: Lancement officiel
+  2025: Formations et certification mannequin
+- Mission, Vision, Objectifs
+- Quote section about promoting the African identity through fashion
+
+3. Leadership (Bureau & Organisation)
+- Profiles with photos placeholders and hover effect
+  - Président: Stephins Wegbe
+  - SG: Romaric Mongazi
+  - Trésorière: Hanelore Codjia
+  - Organisation: Franck Te Koffi
+
+4. Agencies (Agences membres)
+- Grid with cards of agencies (replaceable later)
+  7 Marvel Agency
+  DD Style Africa
+  Models Academy & Management
+- Button: “Demander affiliation”
+
+5. Activities (Activités & Presse)
+- Timeline of events with photo grid
+- Press articles section (links placeholders)
+
+6. Contact
+- Contact form with JS validation:
+  Nom, Téléphone, Email, Objet, Message
+- Success message on submission
+- Social links placeholders
+- Button: “Proposer un partenariat”
+
+Global requirements:
+- Fully responsive (mobile first)
+- Split project in src/components, src/pages, src/assets
+- Use consistent spacing and layout structure
+- Include a professional header + footer
+  Footer must contain legal notice placeholder
+
+JavaScript functionalities:
+- Gallery slider (simple React state)
+- Smooth scrolling
+- Navbar active link highlight
+- Animations triggered on scroll
+
+Deliverables:
+A full Vite.js + React project with:
+- src/
+  - pages/
+  - components/
+  - assets/
+  - styles/
+- Router configured
+- Clean modular code with comments
+- Ready to replace with real content
+
+Goal:
+A professional European-style fashion network website finished and 
+ready for real deployment, easily editable by the user later.
