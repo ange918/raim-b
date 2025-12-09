@@ -8,13 +8,19 @@
   background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
 }
 
+.about-hero {
+  background-image: url('@assets/stock_images/fashion_runway_model_f8d8d27f.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
 .page-hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .page-hero-content {
@@ -202,6 +208,9 @@
   padding: 1.5rem;
   border: 1px solid #eee;
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .bureau-card:hover {
@@ -236,6 +245,10 @@
   color: var(--color-red);
 }
 
+.bureau-info {
+  flex-grow: 1;
+}
+
 .bureau-info h3 {
   font-size: 1rem;
   margin-bottom: 0.25rem;
@@ -247,6 +260,31 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.bureau-social {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+.social-link {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-gray-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gray);
+  transition: var(--transition);
+}
+
+.social-link:hover {
+  background: var(--color-yellow);
+  color: var(--color-black);
 }
 
 .agencies-section {
@@ -263,8 +301,10 @@
   background: var(--color-white);
   padding: 2rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  text-align: center;
+  gap: 1rem;
   border: 1px solid #eee;
   transition: var(--transition);
 }
@@ -282,7 +322,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  border-radius: 10px;
 }
 
 .agency-info h3 {
@@ -298,44 +338,43 @@
   color: var(--color-gray);
 }
 
-.join-network {
-  text-align: center;
-  margin-top: 3rem;
-  padding: 2rem;
-  background: var(--color-white);
-  border: 2px dashed #ddd;
-}
-
-.join-network p {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-  color: var(--color-gray);
-}
-
-.quote-section {
-  background: var(--color-black);
-}
-
-.quote {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 2rem;
-}
-
-.quote p {
-  font-size: 1.5rem;
-  font-style: italic;
-  color: var(--color-white);
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
-}
-
-.quote cite {
-  color: var(--color-yellow);
+.btn-small {
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  background: var(--color-yellow);
+  color: var(--color-black);
   font-family: var(--font-heading);
   font-weight: 600;
-  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: var(--transition);
+}
+
+.btn-small:hover {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+.about-cta {
+  background: var(--color-yellow);
+}
+
+.about-cta-content {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.about-cta-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-black);
+}
+
+.about-cta-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: var(--color-gray-dark);
 }
 
 @media (max-width: 968px) {
@@ -368,10 +407,6 @@
   .timeline-content {
     margin-left: 0;
   }
-
-  .quote p {
-    font-size: 1.2rem;
-  }
 }
 
 @media (max-width: 576px) {
@@ -383,8 +418,7 @@
     grid-template-columns: 1fr;
   }
 
-  .agency-card {
-    flex-direction: column;
-    text-align: center;
+  .about-cta-content h2 {
+    font-size: 1.5rem;
   }
 }

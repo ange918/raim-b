@@ -1,3 +1,13 @@
+.activities-hero {
+  background-image: url('@assets/stock_images/fashion_runway_model_f8d8d27f.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.activities-hero .page-hero-overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
 .section-icon {
   display: inline-block;
   vertical-align: middle;

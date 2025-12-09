@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Target, Eye, CheckCircle, User, Building2, MapPin, Users, ExternalLink } from 'lucide-react';
+import { Target, Eye, CheckCircle, User, Building2, MapPin, Facebook, Instagram } from 'lucide-react';
 import './About.css';
 
 const About = () => {
@@ -41,13 +41,13 @@ const About = () => {
   ];
 
   const leaders = [
-    { name: 'Kpessèton Bienvenu BADOU', role: 'Président', color: 'green' },
-    { name: 'Amand TANGNI', role: 'Secrétaire Général, Porte Parole', color: 'yellow' },
-    { name: 'Hospice Hermann A. KEOUDA', role: 'Trésorier Général', color: 'red' },
-    { name: 'Franck TEKOFFI', role: '1er Secrétaire à l\'Organisation', color: 'green' },
-    { name: 'Sylvadine GOUGNIMENOU', role: '2è Secrétaire à l\'Organisation', color: 'yellow' },
-    { name: 'Rediwane BISSIRIOU', role: '1er Commissaire aux Comptes', color: 'red' },
-    { name: 'Tanguy AHOUANSOU', role: '2è Commissaire aux Comptes', color: 'green' },
+    { name: 'Kpessèton Bienvenu BADOU', role: 'Président', color: 'green', facebook: '#', instagram: '#' },
+    { name: 'Amand TANGNI', role: 'Secrétaire Général, Porte Parole', color: 'yellow', facebook: '#', instagram: '#' },
+    { name: 'Hospice Hermann A. KEOUDA', role: 'Trésorier Général', color: 'red', facebook: '#', instagram: '#' },
+    { name: 'Franck TEKOFFI', role: '1er Secrétaire à l\'Organisation', color: 'green', facebook: '#', instagram: '#' },
+    { name: 'Sylvadine GOUGNIMENOU', role: '2è Secrétaire à l\'Organisation', color: 'yellow', facebook: '#', instagram: '#' },
+    { name: 'Rediwane BISSIRIOU', role: '1er Commissaire aux Comptes', color: 'red', facebook: '#', instagram: '#' },
+    { name: 'Tanguy AHOUANSOU', role: '2è Commissaire aux Comptes', color: 'green', facebook: '#', instagram: '#' },
   ];
 
   const agencies = [
@@ -61,7 +61,7 @@ const About = () => {
 
   return (
     <main className="about">
-      <section className="page-hero">
+      <section className="page-hero about-hero">
         <div className="page-hero-overlay"></div>
         <div className="page-hero-content">
           <h1>À Propos</h1>
@@ -159,6 +159,14 @@ const About = () => {
                   <h3>{leader.name}</h3>
                   <span className="bureau-role">{leader.role}</span>
                 </div>
+                <div className="bureau-social">
+                  <a href={leader.facebook} className="social-link" aria-label="Facebook">
+                    <Facebook size={18} />
+                  </a>
+                  <a href={leader.instagram} className="social-link" aria-label="Instagram">
+                    <Instagram size={18} />
+                  </a>
+                </div>
               </div>
             ))}
           </div>
@@ -183,28 +191,25 @@ const About = () => {
                     <MapPin size={14} /> {agency.location}
                   </span>
                 </div>
+                <a href="#" className="btn btn-small">En savoir plus</a>
               </div>
             ))}
-          </div>
-          <div className="join-network fade-in">
-            <p>Votre agence souhaite rejoindre le réseau ?</p>
-            <Link to="/contact" className="btn btn-primary">
-              Demander affiliation
-            </Link>
           </div>
         </div>
       </section>
 
-      <section className="quote-section section">
+      <section className="about-cta section">
         <div className="container">
-          <blockquote className="quote fade-in">
+          <div className="about-cta-content fade-in">
+            <h2>Rejoignez le réseau RAIM Bénin</h2>
             <p>
-              "Le mannequinat africain porte en lui l'essence de notre identité, 
-              la richesse de nos cultures et la beauté de notre diversité. 
-              Notre mission est de le faire rayonner dans le monde entier."
+              Vous êtes une agence ou un institut de mannequinat au Bénin ? 
+              Rejoignez notre réseau et bénéficiez d'un accompagnement professionnel.
             </p>
-            <cite>— RAIM Bénin</cite>
-          </blockquote>
+            <Link to="/contact" className="btn btn-dark">
+              Demander affiliation
+            </Link>
+          </div>
         </div>
       </section>
     </main>

@@ -1,0 +1,259 @@
+.blog-hero {
+  background-image: url('@assets/stock_images/fashion_runway_model_f8d8d27f.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.blog-hero .page-hero-overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.featured-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--color-white);
+  border: 1px solid #eee;
+  overflow: hidden;
+}
+
+.featured-image {
+  min-height: 400px;
+  background: linear-gradient(135deg, var(--color-black) 0%, #333 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featured-badge {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  background: var(--color-yellow);
+  color: var(--color-black);
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.featured-content {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.blog-category-tag {
+  display: inline-block;
+  background: var(--color-gray-light);
+  color: var(--color-gray-dark);
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+.featured-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.featured-content p {
+  color: var(--color-gray);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.post-meta {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.post-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--color-gray);
+}
+
+.featured-content .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+}
+
+.blog-list {
+  background-color: var(--color-gray-light);
+}
+
+.blog-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 3rem;
+}
+
+.blog-sidebar {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.sidebar-section {
+  background: var(--color-white);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-section h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--color-yellow);
+}
+
+.category-list {
+  list-style: none;
+}
+
+.category-list li {
+  margin-bottom: 0.5rem;
+}
+
+.category-list a {
+  display: block;
+  padding: 0.5rem 0;
+  color: var(--color-gray);
+  transition: var(--transition);
+}
+
+.category-list a:hover,
+.category-list a.active {
+  color: var(--color-black);
+  padding-left: 0.5rem;
+}
+
+.category-list a.active {
+  font-weight: 600;
+  color: var(--color-yellow);
+}
+
+.sidebar-section p {
+  font-size: 0.9rem;
+  color: var(--color-gray);
+  margin-bottom: 1rem;
+}
+
+.newsletter-form input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-body);
+}
+
+.newsletter-form .btn {
+  width: 100%;
+}
+
+.blog-articles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.blog-article-card {
+  background: var(--color-white);
+  border: 1px solid #eee;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.blog-article-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.article-image {
+  height: 180px;
+  background: linear-gradient(135deg, var(--color-gray-light) 0%, #d0d0d0 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.article-image .blog-category-tag {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  margin-bottom: 0;
+}
+
+.article-content {
+  padding: 1.5rem;
+}
+
+.article-content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.article-content p {
+  color: var(--color-gray);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.article-content .post-meta {
+  margin-bottom: 1rem;
+}
+
+.article-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-yellow);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: var(--transition);
+}
+
+.article-link:hover {
+  color: var(--color-black);
+}
+
+@media (max-width: 968px) {
+  .featured-card {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-image {
+    min-height: 250px;
+  }
+
+  .blog-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-sidebar {
+    position: static;
+  }
+
+  .blog-articles {
+    grid-template-columns: 1fr;
+  }
+}

@@ -85,7 +85,7 @@ const Activities = () => {
 
   return (
     <main className="activities">
-      <section className="page-hero">
+      <section className="page-hero activities-hero">
         <div className="page-hero-overlay"></div>
         <div className="page-hero-content">
           <h1>Activités & Presse</h1>

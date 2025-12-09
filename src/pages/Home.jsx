@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Star, Award, Shield, Globe, BookOpen, Users, Eye, Briefcase, Calendar, Building2, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
+import logo from '../assets/logo.jpg';
 import './Home.css';
 
 const Home = () => {
@@ -102,9 +103,7 @@ const Home = () => {
               </Link>
             </div>
             <div className="about-preview-image fade-in">
-              <div className="image-placeholder">
-                <Users size={120} />
-              </div>
+              <img src={logo} alt="RAIM Bénin" className="about-logo" />
             </div>
           </div>
         </div>
@@ -164,12 +163,17 @@ const Home = () => {
                   <span className="blog-date">{post.date}</span>
                   <h3>{post.title}</h3>
                   <p>{post.excerpt}</p>
-                  <a href="#" className="blog-link">
+                  <Link to="/blog" className="blog-link">
                     Lire la suite <ArrowRight size={16} />
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}
+          </div>
+          <div className="blog-cta fade-in">
+            <Link to="/blog" className="btn btn-outline">
+              Voir tous les articles <ArrowRight size={18} />
+            </Link>
           </div>
         </div>
       </section>

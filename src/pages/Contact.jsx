@@ -84,7 +84,7 @@ const Contact = () => {
 
   return (
     <main className="contact">
-      <section className="page-hero">
+      <section className="page-hero contact-hero">
         <div className="page-hero-overlay"></div>
         <div className="page-hero-content">
           <h1>Contact</h1>

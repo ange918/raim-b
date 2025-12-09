@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  background-image: url('@assets/stock_images/fashion_runway_model_f8d8d27f.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -18,9 +18,9 @@
   bottom: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.6) 0%,
-    rgba(0, 0, 0, 0.4) 50%,
-    rgba(0, 0, 0, 0.7) 100%
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.8) 100%
   );
 }
 
@@ -149,16 +149,11 @@
   align-items: center;
 }
 
-.image-placeholder {
+.about-logo {
   width: 100%;
-  max-width: 400px;
-  aspect-ratio: 1;
-  background: linear-gradient(135deg, var(--color-gray-light) 0%, #e0e0e0 100%);
+  max-width: 350px;
   border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-gray);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
 .stats {
@@ -335,6 +330,11 @@
 
 .blog-link:hover {
   color: var(--color-black);
+}
+
+.blog-cta {
+  text-align: center;
+  margin-top: 3rem;
 }
 
 .cta {
