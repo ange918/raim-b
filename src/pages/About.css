@@ -35,6 +35,26 @@
   opacity: 0.9;
 }
 
+.who-we-are {
+  background-color: var(--color-white);
+}
+
+.who-content {
+  max-width: 800px;
+  margin: 2rem auto 0;
+  text-align: center;
+}
+
+.who-content p {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: var(--color-gray);
+}
+
+.who-content strong {
+  color: var(--color-black);
+}
+
 .timeline {
   position: relative;
   max-width: 800px;
@@ -159,6 +179,139 @@
   font-size: 1.05rem;
 }
 
+.section-subtitle {
+  text-align: center;
+  color: var(--color-gray);
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.bureau {
+  background-color: var(--color-white);
+}
+
+.bureau-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.bureau-card {
+  background: var(--color-white);
+  text-align: center;
+  padding: 1.5rem;
+  border: 1px solid #eee;
+  transition: var(--transition);
+}
+
+.bureau-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.bureau-photo {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-gray-light);
+  color: var(--color-gray);
+}
+
+.bureau-card.color-green .bureau-photo {
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  color: var(--color-green);
+}
+
+.bureau-card.color-yellow .bureau-photo {
+  background: linear-gradient(135deg, #fffde7 0%, #fff9c4 100%);
+  color: var(--color-yellow);
+}
+
+.bureau-card.color-red .bureau-photo {
+  background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+  color: var(--color-red);
+}
+
+.bureau-info h3 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.bureau-role {
+  font-size: 0.8rem;
+  color: var(--color-yellow);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.agencies-section {
+  background-color: var(--color-gray-light);
+}
+
+.agencies-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.agency-card {
+  background: var(--color-white);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  border: 1px solid #eee;
+  transition: var(--transition);
+}
+
+.agency-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.agency-logo {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--color-black) 0%, #333 100%);
+  color: var(--color-yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.agency-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.agency-location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--color-gray);
+}
+
+.join-network {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  background: var(--color-white);
+  border: 2px dashed #ddd;
+}
+
+.join-network p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--color-gray);
+}
+
 .quote-section {
   background: var(--color-black);
 }
@@ -185,13 +338,21 @@
   font-size: 1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .page-hero-content h1 {
     font-size: 2rem;
   }
 
   .mv-grid {
     grid-template-columns: 1fr;
+  }
+
+  .bureau-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .agencies-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .timeline {
@@ -210,5 +371,20 @@
 
   .quote p {
     font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .bureau-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .agencies-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .agency-card {
+    flex-direction: column;
+    text-align: center;
   }
 }

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
-import { Target, Eye, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Target, Eye, CheckCircle, User, Building2, MapPin, Users, ExternalLink } from 'lucide-react';
 import './About.css';
 
 const About = () => {
@@ -39,13 +40,46 @@ const About = () => {
     'Établir des standards éthiques pour l\'industrie',
   ];
 
+  const leaders = [
+    { name: 'Kpessèton Bienvenu BADOU', role: 'Président', color: 'green' },
+    { name: 'Amand TANGNI', role: 'Secrétaire Général, Porte Parole', color: 'yellow' },
+    { name: 'Hospice Hermann A. KEOUDA', role: 'Trésorier Général', color: 'red' },
+    { name: 'Franck TEKOFFI', role: '1er Secrétaire à l\'Organisation', color: 'green' },
+    { name: 'Sylvadine GOUGNIMENOU', role: '2è Secrétaire à l\'Organisation', color: 'yellow' },
+    { name: 'Rediwane BISSIRIOU', role: '1er Commissaire aux Comptes', color: 'red' },
+    { name: 'Tanguy AHOUANSOU', role: '2è Commissaire aux Comptes', color: 'green' },
+  ];
+
+  const agencies = [
+    { name: '7 Marvel Agency', location: 'Cotonou, Bénin' },
+    { name: 'DD Style Africa', location: 'Cotonou, Bénin' },
+    { name: 'Models Academy', location: 'Cotonou, Bénin' },
+    { name: 'Benin Fashion Management', location: 'Cotonou, Bénin' },
+    { name: 'Elite Benin', location: 'Cotonou, Bénin' },
+    { name: 'Onyx Models', location: 'Cotonou, Bénin' },
+  ];
+
   return (
     <main className="about">
       <section className="page-hero">
         <div className="page-hero-overlay"></div>
         <div className="page-hero-content">
-          <h1>Qui sommes-nous ?</h1>
-          <p>Découvrez notre histoire et notre engagement</p>
+          <h1>À Propos</h1>
+          <p>Découvrez notre histoire, notre équipe et nos agences membres</p>
+        </div>
+      </section>
+
+      <section className="who-we-are section">
+        <div className="container">
+          <h2 className="section-title fade-in">Qui sommes-nous ?</h2>
+          <div className="who-content fade-in">
+            <p>
+              Le <strong>RAIM Bénin</strong> (Réseau des Agences & Instituts du Mannequinat du Bénin) 
+              est une organisation professionnelle qui fédère les agences et instituts de mannequinat 
+              du Bénin. Notre mission est de structurer, professionnaliser et promouvoir le secteur 
+              du mannequinat béninois sur la scène nationale et internationale.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -105,6 +139,58 @@ const About = () => {
                 <span>{objective}</span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bureau section">
+        <div className="container">
+          <h2 className="section-title fade-in">Bureau & Organisation</h2>
+          <p className="section-subtitle fade-in">
+            Les membres du bureau exécutif du RAIM Bénin
+          </p>
+          <div className="bureau-grid">
+            {leaders.map((leader, index) => (
+              <div key={index} className={`bureau-card fade-in color-${leader.color}`}>
+                <div className="bureau-photo">
+                  <User size={60} />
+                </div>
+                <div className="bureau-info">
+                  <h3>{leader.name}</h3>
+                  <span className="bureau-role">{leader.role}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="agencies-section section">
+        <div className="container">
+          <h2 className="section-title fade-in">Agences Membres</h2>
+          <p className="section-subtitle fade-in">
+            Les agences et instituts qui composent notre réseau
+          </p>
+          <div className="agencies-grid">
+            {agencies.map((agency, index) => (
+              <div key={index} className="agency-card fade-in">
+                <div className="agency-logo">
+                  <Building2 size={40} />
+                </div>
+                <div className="agency-info">
+                  <h3>{agency.name}</h3>
+                  <span className="agency-location">
+                    <MapPin size={14} /> {agency.location}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="join-network fade-in">
+            <p>Votre agence souhaite rejoindre le réseau ?</p>
+            <Link to="/contact" className="btn btn-primary">
+              Demander affiliation
+            </Link>
           </div>
         </div>
       </section>
